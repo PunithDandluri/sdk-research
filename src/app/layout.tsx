@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { FpjsProvider } from "@fingerprintjs/fingerprintjs-pro-react";
+import { MyFpjsProvider } from "./components/MyFpjsProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <MyFpjsProvider>{children}</MyFpjsProvider>
       </body>
     </html>
   );
