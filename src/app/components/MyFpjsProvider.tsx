@@ -7,7 +7,7 @@ export function MyFpjsProvider({ children }: PropsWithChildren) {
   return (
     <FpjsProvider
       loadOptions={{
-        apiKey: process.env.NEXT_PUBLIC_FPJS_API_KEY || "avGwYMcYU2ZPphnR3yhO",
+        apiKey: process.env.NEXT_PUBLIC_FPJS_API_KEY || "",
       }}>
       {children}
     </FpjsProvider>
